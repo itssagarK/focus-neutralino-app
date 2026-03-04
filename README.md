@@ -7,7 +7,7 @@ This is a minimalistic focus timer built using Neutralino.js.
 - Start/stop focus timer
 - Notifications
 
-## Screenshot
+## Screenshot file:///C:/Users/Home/focus/focus-app.png.png
 ![Developer Focus Timer](focus-timer.png)
 
 ## Installation

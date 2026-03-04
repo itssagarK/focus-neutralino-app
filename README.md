@@ -1,285 +1,119 @@
-Focus — Minimal Desktop Focus Timer
-Overview
+#  **Focus — Lightweight Desktop Productivity Timer**
 
-Focus is a lightweight desktop productivity application built using Neutralinojs, HTML, CSS, and JavaScript.
 
-The purpose of this application is to help developers and students stay focused while working on a specific task. The application provides a simple timer that allows users to start a focus session, complete their work, and automatically record the session.
 
-Unlike many productivity tools that contain many complex features and settings, Focus is designed to be minimal and easy to use. The interface only includes the essential tools needed to start working quickly without distractions.
+**Focus** is a **lightweight desktop productivity application** built using **Neutralinojs, HTML, CSS, and JavaScript**.
 
-The application also records session history, including the date, time, and duration of each completed focus session.
+The goal of this application is to help **developers and students stay focused on a single task** by providing a **minimal and distraction-free focus timer**.
 
-Why This Project Was Built
+Unlike many productivity tools that include **complex dashboards and unnecessary features**, **Focus follows a minimal design philosophy**, allowing users to **start working quickly and track their productivity easily**.
 
-Many productivity and timer applications available today contain too many features, dashboards, and settings. While these features may be useful in some cases, they can also make the application complicated and distracting.
+---
 
-The main goal of Focus is to create a simple and distraction-free focus timer.
+# 📸 **Application Preview**
 
-The idea behind the application is very simple:
+![Focus App](https://github.com/itssagarK/focus-neutralino-app/blob/main/focus-app.png.png?raw=true)
 
-start a timer
+The screenshot above shows the **Focus desktop timer during an active focus session**, displaying:
 
-work on one task
+- **Current task input**
+- **Live countdown timer**
+- **Session history tracking**
+- **System resource monitoring**
 
-finish the session
+---
 
-automatically save the session history
+# 🚀 **Key Features**
 
-This helps users stay focused and also track their productivity over time.
+### ⏱ **Focus Timer**
+A **simple and precise countdown timer** designed for productivity sessions.
 
-The project was also built to demonstrate how web technologies can be used to build lightweight desktop applications using Neutralinojs, instead of heavier frameworks like Electron.
+The timer counts down from the selected number of minutes and updates **every second**.
 
-Application Preview
+---
 
-Below is a preview of the Focus desktop application interface.
+### 🧠 **Minimal Interface**
+The application follows a **clean and distraction-free design** so users can start working immediately without complicated settings.
 
-The interface displays the active timer, the current task input, and the history of completed focus sessions.
+---
 
-Main Features
-Focus Timer
+### 📜 **Session History**
+Every completed session is **automatically saved** and displayed in the **Focus Sessions section**.
 
-The application includes a focus timer that allows users to start a work session.
-The timer counts down from the selected number of minutes.
+---
 
-Minimal Interface
-
-The design is intentionally simple and distraction-free so users can quickly start working without unnecessary options or settings.
-
-Session History
-
-Every completed focus session is automatically saved and displayed in the Focus Sessions section.
-
-Date and Time Recording
-
-Each saved session contains:
-
-the date of the session
-
-the time when the session finished
-
-the duration of the focus session
-
-Desktop Notifications
-
-When a focus session ends, the application shows a native desktop notification.
-
-Alarm Sound
-
-An alarm sound plays when the timer reaches zero to inform the user that the session has finished.
-
-System Monitoring
-
-The application can display RAM usage of the system using Neutralinojs native APIs.
-This demonstrates interaction between the application and the operating system.
-
-Technologies Used
-
-This project uses the following technologies.
-
-Neutralinojs
-
-Neutralinojs is a lightweight framework used to build cross-platform desktop applications using web technologies.
-
-Unlike Electron, Neutralinojs does not bundle Chromium or Node.js, which makes applications smaller and faster.
-
-HTML
-
-HTML is used to create the structure of the application interface.
-
-CSS
-
-CSS is used to design the layout and appearance of the application.
-
-JavaScript
-
-JavaScript is used to implement the main application logic including:
-
-timer functionality
-
-session storage
-
-session history display
-
-system monitoring
-
-Neutralinojs APIs Used
-
-The project demonstrates several native APIs provided by Neutralinojs.
-
-Filesystem API
-
-Used to store focus session history locally.
-
-Functions used:
-
-Neutralino.filesystem.readFile()
-Neutralino.filesystem.writeFile()
-Window API
-
-Used to update the application window title dynamically while the timer is running.
-
-Neutralino.window.setTitle()
-OS API
-
-Used to show native desktop notifications.
-
-Neutralino.os.showNotification()
-Computer API
-
-Used to monitor system memory usage.
-
-Neutralino.computer.getMemoryInfo()
-How the Application Works (Step-by-Step)
-Step 1 — Launch the Application
-
-When the application starts:
-
-Neutralino initializes the desktop environment
-
-the default timer value appears (25 minutes)
-
-previous session history is loaded from storage
-
-system monitoring begins
-
-Step 2 — Enter Current Task
-
-The user enters the task they want to focus on.
-
-Example:
-
-Complete GSoC proposal
-
-This helps the user stay focused on one specific task.
-
-Step 3 — Start the Focus Session
-
-When the Start Session button is clicked:
-
-the timer starts counting down
-
-the status changes to Focusing
-
-the window title updates with the remaining time
-
-Example window title:
-
-Focus: 24:59
-Step 4 — Timer Countdown
-
-Every second:
-
-the timer decreases
-
-the timer display updates
-
-the window title updates
-
-This continues until the timer reaches zero.
-
-Step 5 — Session Completion
-
-When the timer reaches 00:00:
-
-an alarm sound plays
-
-a desktop notification appears
-
-the focus session is automatically saved
-
-Step 6 — Saving Session Data
-
-Session data is stored in a local file called:
-
-sessions.json
-
+### 📅 **Date & Time Tracking**
 Each session record contains:
 
-session ID
+- **Session date**
+- **Session completion time**
+- **Session duration**
 
-timestamp
+This allows users to **track their productivity over time**.
 
-session duration
+---
 
-Example record:
+### 🔔 **Desktop Notifications**
+When a focus session finishes, the application sends a **native desktop notification** using the **Neutralinojs OS API**.
 
-{
-"id": 1741093402,
-"timestamp": "4/3/2026, 11:13 PM",
-"duration": 25
-}
-Step 7 — Viewing Session History
+---
 
-The Focus Sessions section displays previously completed sessions.
+### 🔊 **Alarm Sound**
+An **alarm sound** plays when the timer reaches **zero**, notifying the user that the focus session has ended.
 
-Users can see:
+---
 
-when the session was completed
+### 💻 **System Resource Monitoring**
+The application can display **RAM usage of the system** using the **Neutralinojs Computer API**, demonstrating **interaction between the application and the operating system**.
 
-how long the session lasted
+---
 
-the total number of sessions completed
+# 🎯 **Why This Project Was Built**
 
-Step 8 — Reset Timer
+Many productivity applications today contain **too many features, dashboards, and configuration options**, which often make them **complicated and distracting**.
 
-The Reset button stops the current timer and resets it to the selected duration.
+The goal of **Focus** is to provide a **simple productivity tool** that helps users stay focused on a single task.
 
-Project Structure
+The workflow is intentionally simple:
 
-Example project folder structure:
+1. **Start a timer**
+2. **Work on one task**
+3. **Complete the session**
+4. **Automatically save the session history**
 
-focus-app
-│
-├── index.html
-├── styles.css
-├── alarm.mp3
-├── README.md
-│
-├── js
-│   ├── main.js
-│   └── neutralino.js
-│
-└── screenshots
-    └── focus-app.png
-How to Run the Project
-Install Neutralino CLI
-npm install -g @neutralinojs/neu
-Run the Application
+This approach helps users **stay productive while keeping the application lightweight and easy to use**.
 
-Navigate to the project folder and run:
+The project also demonstrates how **modern web technologies can be used to build lightweight desktop applications using Neutralinojs instead of heavier frameworks like Electron**.
 
-neu run
+---
 
-This will launch the desktop application.
+# 🛠 **Technologies Used**
 
-Future Improvements
+| Technology | Purpose |
+|------------|--------|
+| **Neutralinojs** | Lightweight desktop application framework |
+| **HTML** | Application structure |
+| **CSS** | User interface styling |
+| **JavaScript** | Application logic |
 
-Possible improvements for this project include:
+---
 
-dark mode support
+# ⚙ **Neutralinojs APIs Used**
 
-break timer between sessions
+The project demonstrates several **native APIs provided by Neutralinojs**.
 
-productivity analytics dashboard
+| API Module | Purpose |
+|-----------|--------|
+| **Neutralino.filesystem** | Read and write session history (`sessions.json`) |
+| **Neutralino.os** | Display native desktop notifications |
+| **Neutralino.window** | Update window title dynamically |
+| **Neutralino.computer** | Monitor system RAM usage |
 
-exporting session history to CSV
+Example API usage:
 
-system tray integration
-
-keyboard shortcuts
-
-Learning Outcomes
-
-This project helped demonstrate:
-
-building desktop applications using web technologies
-
-using Neutralinojs native APIs
-
-storing data locally using the filesystem API
-
-interacting with system resources
-
-designing a minimal and functional user interface
-
-![image alt](https://github.com/itssagarK/focus-neutralino-app/blob/main/focus-app.png.png?raw=true)
+```javascript
+Neutralino.filesystem.readFile()
+Neutralino.filesystem.writeFile()
+Neutralino.window.setTitle()
+Neutralino.os.showNotification()
+Neutralino.computer.getMemoryInfo()

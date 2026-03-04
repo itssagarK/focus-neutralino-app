@@ -65,3 +65,16 @@ Computer API
 Used to monitor system memory usage.
 Function used:
 Neutralino.computer.getMemoryInfo()
+
+
+
+Application Interface:
+The screenshot below shows the Focus desktop application running a focus session.
+
+The interface displays the active timer, the current task, and the recorded focus session history.  
+When the timer finishes, the session is automatically saved with the date, time, and session duration.
+
+![Focus App Screenshot](screenshot.png)
+Focus is a minimal desktop focus timer built using Neutralinojs.
+
+The application helps users stay productive by allowing them to run focus sessions and track completed work sessions with timestamps.

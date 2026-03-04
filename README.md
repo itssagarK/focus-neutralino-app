@@ -282,4 +282,4 @@ interacting with system resources
 
 designing a minimal and functional user interface
 
-![image alt]([image_url](https://github.com/itssagarK/focus-neutralino-app/blob/main/focus-app.png.png?raw=true))
+![image alt](https://github.com/itssagarK/focus-neutralino-app/blob/main/focus-app.png.png?raw=true)

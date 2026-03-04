@@ -1,22 +1,67 @@
+Focus — Minimal Desktop Focus Timer
+Project Overview
 Focus is a lightweight desktop productivity application built using Neutralinojs, HTML, CSS, and JavaScript.
-The purpose of this application is to help developers and students focus on their tasks using a Pomodoro-style timer. The user can start a focus session, track completed sessions, and monitor system usage while working.
-Unlike normal web applications, this app uses Neutralinojs Native APIs, which allows the web interface to interact with the operating system. The app can access the filesystem, show desktop notifications, and read system information such as RAM usage.
-This project demonstrates how web technologies can be used to build lightweight desktop applications without heavy frameworks like Electron.
+The goal of this application is to help developers and students stay focused while working on a task. The app provides a simple timer that allows users to work in focused sessions and track their completed work sessions.
+Unlike many productivity tools that include too many features, Focus is intentionally minimal and easy to use. The interface only contains the essential tools needed to start a focus session and track productivity.
+The application also records session history, including the date, time, and duration of each focus session.
 
+Why This Project Was Built
+Many productivity applications are complicated and contain too many features. These extra features can sometimes make the app harder to use and distract users from their work.
+This project was built to create a simple and distraction-free focus timer.
 
-Why I Built This Project ?
-I built Focus as a simple desktop application to help people concentrate on their work without distractions.
-Many productivity and timer applications today are very complex. They include many features, settings, dashboards, and notifications that sometimes make the app harder to use instead of helping the user focus. I wanted to create something minimal, clean, and easy to use.
-The idea behind Focus is very simple:
-start a timer, work on one task, and track your progress.
-This application allows users to start a focus session, work for a fixed amount of time, and automatically record their completed sessions. Each session is saved with the date, time, and duration, so users can see their productivity history.
-The main goals of this project are:
-to create a minimal and distraction-free focus timer
-to help users concentrate on one task at a time
-to keep a record of completed focus sessions
-to demonstrate how a lightweight desktop application can be built using Neutralinojs
-Unlike many complicated productivity tools, Focus is intentionally simple. The interface contains only the essential features needed to start working quickly.
-The application includes:
-a focus timer to manage work sessions
-a history section that records previous sessions
-automatic saving of date, time, and session duration
+The main idea behind Focus is:
+start a timer
+work on a single task
+save the session automatically
+track your productivity history
+
+The application is designed to be minimal, lightweight, and fast, making it easy for anyone to start focusing on their work without unnecessary complexity.
+Main Features
+Focus Timer
+Users can start a focus session using a timer. The timer counts down from the selected number of minutes.
+Session History
+Every completed session is automatically saved and displayed in the Focus Sessions section.
+Date and Time Recording
+
+Each session record contains:
+the date
+the time
+the session duration
+Desktop Notification
+When a focus session finishes, the app shows a desktop notification to inform the user.
+Alarm Sound
+An alarm sound plays when the timer reaches zero.
+System Monitoring
+The application can display the RAM usage of the system using Neutralinojs native APIs.
+
+Technologies Used
+This project is built using the following technologies:
+Neutralinojs
+A lightweight framework used to build desktop applications using web technologies.
+HTML
+Used to create the structure of the application interface.
+CSS
+Used to design the layout and appearance of the application.
+JavaScript
+Used to control the application logic, including the timer, session storage, and system monitoring.
+Neutralinojs APIs Used
+The application demonstrates several Neutralinojs native APIs:
+
+Filesystem API
+Used to store session history locally.
+Functions used:
+Neutralino.filesystem.readFile()
+Neutralino.filesystem.writeFile()
+Window API
+Used to update the application window title with the remaining timer.
+Function used:
+Neutralino.window.setTitle()
+OS API
+Used to display desktop notifications.
+
+Function used:
+Neutralino.os.showNotification()
+Computer API
+Used to monitor system memory usage.
+Function used:
+Neutralino.computer.getMemoryInfo()

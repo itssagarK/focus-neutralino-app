@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!-- Basic page settings -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DevFocus Pro | Neutralinojs</title>
+
+<!-- Main CSS file -->
+<link rel="stylesheet" href="/styles.css">
+
+</head>
+
+
+<body>
+
+<!-- Main App Container -->
+<div class="app-container">
+
+<!-- Status label showing app state -->
+<div class="status-badge" id="status">
+Ready to Focus
+</div>
+
+
+<!-- App Header -->
+<header>
+
+<h1>Developer Focus Timer</h1>
+
+<p class="subtitle">
+Built with Neutralinojs Native APIs
+</p>
+
+</header>
+
+
+<main>
+
+<!-- ================= TASK INPUT ================= -->
+
+<section class="task-input-area">
+
+<!-- Task label -->
+<label for="currentTask">
+Current Task
+</label>
+
+<!-- User enters current work -->
+<input
+type="text"
+id="currentTask"
+placeholder="Enter the task you want to focus on..."
+>
+
+</section>
+
+
+<!-- ================= TIMER DISPLAY ================= -->
+
+<section class="timer-card">
+
+<!-- Timer text (updated by JS) -->
+<div class="timer-display">
+<span id="time">25:00</span>
+</div>
+
+
+<!-- Timer control buttons -->
+<div class="controls">
+
+<button
+class="btn-primary"
+onclick="startTimer()">
+Start Session
+</button>
+
+<button
+class="btn-secondary"
+onclick="resetTimer()">
+Reset
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ================= TIMER SETTINGS ================= -->
+
+<section class="settings">
+
+<div class="input-group">
+
+<!-- User can change session length -->
+<label for="minutesInput">
+Set Focus Minutes:
+</label>
+
+<input
+id="minutesInput"
+type="number"
+value="25"
+min="1"
+max="120"
+>
+
+</div>
+
+</section>
+
+
+<!-- ================= SESSION HISTORY ================= -->
+
+<section class="history-section">
+
+<div class="history-header">
+
+<h2>Focus Sessions</h2>
+
+<!-- Total session counter -->
+<span class="count-chip">
+Total:
+<span id="sessionCount">0</span>
+</span>
+
+</div>
+
+<!-- Session list (filled by JavaScript) -->
+<ul id="history" class="history-list">
+
+<!-- Example item inserted by JS -->
+<!--
+<li>
+<span>📅 4/3/2026, 14:30</span>
+<span class="count-chip">25m</span>
+</li>
+-->
+
+</ul>
+
+</section>
+
+</main>
+
+
+<!-- ================= AUDIO ALARM ================= -->
+
+<!-- Sound played when timer finishes -->
+<audio id="alarmSound" preload="auto">
+
+<source src="alarm.mp3" type="audio/mpeg">
+
+</audio>
+
+
+<!-- ================= SYSTEM INFO FOOTER ================= -->
+
+<footer id="info">
+
+<!-- Updated by RAM monitor -->
+<span id="ramUsage">
+System Load: Calculating...
+</span>
+
+</footer>
+
+
+</div>
+
+
+<!-- ================= SCRIPTS ================= -->
+
+<!-- Neutralino runtime (required) -->
+<script src="/js/neutralino.js"></script>
+
+<!-- App logic -->
+<script src="/js/main.js"></script>
+
+
+</body>
+
+</html>
